@@ -2,6 +2,9 @@
 
 A full-stack CRUD application built with the MEAN stack (MongoDB, Express.js, Angular 15, and Node.js) for managing tutorials. The application is containerized using Docker for easy deployment.
 
+📸 Screenshots
+<p align="center"> <img src="assets\app.png" width="45%" /> <img src="assets\docker.png" width="45%" /> </p>
+
 ## Features
 
 - **Create, Read, Update, Delete (CRUD)** tutorials
