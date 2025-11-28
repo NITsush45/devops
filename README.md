@@ -1,27 +1,46 @@
-In this DevOps task, you need to build and deploy a full-stack CRUD application using the MEAN stack (MongoDB, Express, Angular 15, and Node.js). The backend will be developed with Node.js and Express to provide REST APIs, connecting to a MongoDB database. The frontend will be an Angular application utilizing HTTPClient for communication.  
 
-The application will manage a collection of tutorials, where each tutorial includes an ID, title, description, and published status. Users will be able to create, retrieve, update, and delete tutorials. Additionally, a search box will allow users to find tutorials by title.
+**Start the application:**
+   ```bash
+   docker compose up -d
 
-## Project setup
+   Access the application:
 
-### Node.js Server
+Frontend: http://localhost
+
+Backend API: http://localhost:3002
+
+Check running services:
+docker compose ps
+
+Stop the application:
+docker compose down
+
+
+Backend Setup (Node.js Server)
+Navigate to backend directory:
 
 cd backend
+Install dependencies:
 
 npm install
+Configure MongoDB:
+Update the database configuration in app/config/db.config.js
 
-You can update the MongoDB credentials by modifying the `db.config.js` file located in `app/config/`.
+Start the server:
 
-Run `node server.js`
+node server.js
+Server runs on http://localhost:3000
 
-### Angular Client
+Frontend Setup (Angular Client)
+Navigate to frontend directory:
 
 cd frontend
+Install dependencies:
 
 npm install
+Configure API endpoint:
+Update src/app/services/tutorial.service.ts to adjust how the frontend interacts with the backend
 
-Run `ng serve --port 8081`
-
-You can modify the `src/app/services/tutorial.service.ts` file to adjust how the frontend interacts with the backend.
-
-Navigate to `http://localhost:8081/`
+Start the Angular development server:
+ng serve --port 8081
+Application runs on http://localhost:8081
